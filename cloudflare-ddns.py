@@ -8,11 +8,11 @@ SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 IP_LOG_FILE = os.path.join(SCRIPT_DIR, "ip_log.json")
 
 # 从环境变量获取配置
-API_TOKEN = os.getenv("CF_API_TOKEN")
-ZONE_ID = os.getenv("CF_ZONE_ID")
-RECORD_NAME = os.getenv("CF_RECORD_NAME")
-TTL = os.getenv("CF_TTL", "1")  # 默认 TTL 为 1 (自动)
-PROXIED = os.getenv("CF_PROXIED", "false").lower() == "true"  # 是否启用 Cloudflare 代理
+API_TOKEN = os.getenv("6ZJZK4d6lNPVpvRStD3G1os-g0TqpPDnJVWDtX1w")     # CF_API_TOKEN: Cloudflare API 令牌 (需要有 DNS 编辑权限)
+ZONE_ID = os.getenv("34e3d360b9318397527c4763b4e56a58")               # CF_ZONE_ID: 你的域名区域 ID
+RECORD_NAME = os.getenv("fdd.ggbt.dpdns.org")                             # CF_RECORD_NAME: 需要更新的子域名 (如 "ddns.example.com")
+TTL = os.getenv("CF_TTL", "1")  # 默认 TTL 为 1 (自动)                 # CF_TTL (可选): TTL 值，默认为 "1" (自动)
+PROXIED = os.getenv("CF_PROXIED", "false").lower() == "true"  # 是否启用 Cloudflare 代理  CF_PROXIED (可选): 是否启用 Cloudflare 代理，"true" 或 "false"
 
 
 def get_current_ip():
